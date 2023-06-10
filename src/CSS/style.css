@@ -1,0 +1,14 @@
+.home-page {
+  height: 100vh;
+  background-color: lightblue;
+}
+.home-btn {
+  margin-top: 10px;
+  height: 30px;
+  font-weight: bold;
+}
+.nav,
+.nav-h2,
+.nav-btn {
+  text-decoration: none;
+}
