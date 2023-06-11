@@ -25,27 +25,27 @@ const AddStudent = () => {
       programStudy,
     };
 
-    try {
-      const response = await fetch("http://localhost:3001/student", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newStudent),
-      });
+//     try {
+//       const response = await fetch("http://localhost:3001/student", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(newStudent),
+//       });
 
-      if (response.ok) {
-        // Redirect to /student after successful submission
-        window.location.href = "/student";
-      } else {
-        console.error("Failed to create student");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
+//       if (response.ok) {
+//         // Redirect to /student after successful submission
+//         window.location.href = "/student";
+//       } else {
+//         console.error("Failed to create student");
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//     }
+//   };
 
-  const getFacultyByProgramStudy = (programStudy) => {
+  const getFacultyByProgramStudy = (newStudent) => {
     switch (programStudy) {
       case "Ekonomi":
       case "Manajemen":
@@ -65,8 +65,18 @@ const AddStudent = () => {
       default:
         return "";
     }
-  };
+    
+   props.createStudent(studentdata);
 
+    setFullname("");
+    setBirthDate("");
+    setGender("");
+    setProgramStudy("");
+    setAddress("");
+    setProfilePicture("");
+    setPhoneNumber("");
+  };
+    
   return (
     <form onSubmit={handleSubmit}>
       <div>
