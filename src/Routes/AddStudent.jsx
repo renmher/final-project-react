@@ -24,15 +24,17 @@ const AddStudent = () => {
       faculty,
       programStudy,
     };
+    
 
-    try {
-      const response = await fetch("http://localhost:3001/student", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newStudent),
-      });
+//gwe saranin jangan disini bang
+//     try {
+//       const response = await fetch("http://localhost:3001/student", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(newStudent),
+//       });
 
       if (response.ok) {
         // Redirect to /student after successful submission
